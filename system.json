@@ -1,0 +1,22 @@
+{
+  "name": "hitos-foundryvtt",
+  "title": "Hitos: Guía Genérica",
+  "description": "Sistema interpretativo de NoSoloRol para FoundryVTT",
+  "version": 0.01,
+  "minimumCoreVersion": "0.5.5",
+  "compatibleCoreVersion": "0.5.5",
+  "templateVersion": 1,
+  "author": "HonzoNebro",
+  "esmodules": ["module/simple.js"],
+  "styles": ["styles/simple.css"],
+  "packs": [],
+  "languages": ["es"],
+  "gridDistance": 5,
+  "gridUnits": "pies",
+  "primaryTokenAttribute": "resistencia",
+  "secondaryTokenAttribute": "drama",
+  "url": "https://https://github.com/HonzoNebro/hitos-foundryVTT/",
+  "manifest": "https://https://github.com/HonzoNebro/hitos-foundryVTT/raw/master/system.json",
+  "download": "https://https://github.com/HonzoNebro/hitos-foundryVTT/-/archive/release-001/hitos-release-001.zip",
+  "license": "LICENSE.txt"
+}
