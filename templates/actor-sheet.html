@@ -4,16 +4,10 @@
     <header class="sheet-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <h1 class="charname"><input name="nombre" type="text" value="{{actor.nombre}}" placeholder="Nombre"/></h1>
             <div class="resource">
-                <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-            </div>
-            <div class="resource">
-                <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
+                <input type="text" name="concepto" value="{{actor.concepto}}" data-dtype="String" />
+                <input type="text" name="cita" value="{{actor.cita}}" data-dtype="String" />
             </div>
         </div>
     </header>
@@ -22,7 +16,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="items">Items</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="caracteristicas">caracteristicas</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -49,9 +43,9 @@
             </ol>
         </div>
 
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <header class="attributes-header flexrow">
+        {{!-- caracteristicas Tab --}}
+        <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
+            <header class="caracteristicas-header flexrow">
                 <span class="attribute-key">Attribute Key</span>
                 <span class="attribute-value">Value</span>
                 <span class="attribute-label">Label</span>
@@ -59,17 +53,17 @@
                 <a class="attribute-control" data-action="create"><i class="fas fa-plus"></i></a>
             </header>
 
-            <ol class="attributes-list">
-            {{#each data.attributes as |attr key|}}
+            <ol class="caracteristicas-list">
+            {{#each data.caracteristicas as |attr key|}}
                 <li class="attribute flexrow" data-attribute="{{key}}">
-                    <input class="attribute-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
+                    <input class="attribute-key" type="text" name="data.caracteristicas.{{key}}.key" value="{{key}}"/>
                     {{#if attr.isCheckbox}}
-                    <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.{{key}}.value" {{checked attr.value}}/></label>
+                    <label class="attribute-value checkbox"><input type="checkbox" name="data.caracteristicas.{{key}}.value" {{checked attr.value}}/></label>
                     {{else}}
-                    <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="{{attr.dtype}}"/>
+                    <input class="attribute-value" type="text" name="data.caracteristicas.{{key}}.value" value="{{attr.value}}" data-dtype="{{attr.dtype}}"/>
                     {{/if}}
-                    <input class="attribute-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
-                    <select class="attribute-dtype" name="data.attributes.{{key}}.dtype">
+                    <input class="attribute-label" type="text" name="data.caracteristicas.{{key}}.label" value="{{attr.label}}"/>
+                    <select class="attribute-dtype" name="data.caracteristicas.{{key}}.dtype">
                         {{#select attr.dtype}}
                         {{#each ../dtypes as |t|}}
                         <option value="{{t}}">{{t}}</option>
