@@ -21,10 +21,10 @@ export class SimpleActorSheet extends ActorSheet {
   getData() {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
-    /*for ( let attr of Object.values(data.data.caracteristicas) ) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-      attr.is
-    }*/
+    for ( let attr of Object.values(data.data.caracteristicas) ) {
+      //attr.isCheckbox = attr.dtype === "Boolean";
+      attr.dtype === "String";
+    }
     return data;
   }
 
