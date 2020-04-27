@@ -15,8 +15,8 @@
   "gridUnits": "pies",
   "primaryTokenAttribute": "resistencia",
   "secondaryTokenAttribute": "drama",
-  "url": "https://https://github.com/HonzoNebro/hitos-foundryVTT/",
-  "manifest": "https://https://github.com/HonzoNebro/hitos-foundryVTT/raw/master/system.json",
-  "download": "https://https://github.com/HonzoNebro/hitos-foundryVTT/-/archive/release-001/hitos-release-001.zip",
+  "url": "https://https://github.com/HonzoNebro/hitos-foundryvtt/",
+  "manifest": "https://raw.githubusercontent.com/HonzoNebro/hitos-foundryVTT/develop/system.json",
+  "download": "https://github.com/HonzoNebro/hitos-foundryVTT/archive/develop.zip",
   "license": "LICENSE.txt"
 }
