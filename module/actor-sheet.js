@@ -7,8 +7,8 @@ export class SimpleActorSheet extends ActorSheet {
   /** @override */
 	static get defaultOptions() {
 	  return mergeObject(super.defaultOptions, {
-  	  classes: ["worldbuilding", "sheet", "actor"],
-  	  template: "systems/worldbuilding/templates/actor-sheet.html",
+  	  classes: ["hitos", "sheet", "actor"],
+  	  template: "systems/hitos/templates/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
